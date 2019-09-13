@@ -89,7 +89,7 @@ UI.Menu = new (function() {
 				td = document.createElement("td");
 				td.setAttribute("class", "tool_button");
 				td.setAttribute("id", "tool_button " + button[0]);
-				td.innerHTML = 
+				td.innerHTML =
 					'<table cellpadding="0" cellspacing="0"><tr><td valign="middle">' +
 						'<img src="img/' + button[1] + '.png" />' +
 					'</td><td valign="middle" style="padding-left:5px">' +
@@ -325,7 +325,7 @@ UI.Menu = new (function() {
 
 	this.loadBehaviorClicked = function() {
 		if (RC.Controller.isReadonly()) return;
-		
+
 		UI.Panels.SelectBehavior.setSelectionCallback(function(manifest) {
 			IO.BehaviorLoader.loadBehavior(manifest);
 		});

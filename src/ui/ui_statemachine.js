@@ -112,7 +112,7 @@ UI.Statemachine = new (function() {
 			pan_origin.x = x;
 			pan_origin.y = y;
 
-		} 
+		}
 		if (selecting) {
 			var xoffset = 0, yoffset = 0;
 			if (dx < 0) {
@@ -279,7 +279,7 @@ UI.Statemachine = new (function() {
 		drawn_sms = [];
 		that.setDisplayedSM(Behavior.getStatemachine());
 	}
-	
+
 	this.removeSelection = function() {
 		selecting = false;
 		selection_area.attr({x: 0, y: 0, width: 0, height: 0, opacity: 0});
@@ -298,11 +298,11 @@ UI.Statemachine = new (function() {
 
 		var node_drawings = drawings.filter(function(element) {
 			return (
-				element.obj instanceof State 
+				element.obj instanceof State
 				|| element.obj instanceof Statemachine
 				|| element.obj instanceof BehaviorState
 				) && (
-				!element.obj.getStateClass().startsWith(":") 
+				!element.obj.getStateClass().startsWith(":")
 				|| element.obj.getStateClass() == ":OUTCOME"
 				|| element.obj.getStateClass() == ":STATEMACHINE"
 			);
@@ -350,7 +350,7 @@ UI.Statemachine = new (function() {
 			.gravity(0.05)
 			.charge(-100)
 			.linkStrength(1);
-		
+
 		force.start();
 		for (var i = 0; i < 20; ++i) force.tick();
 		force.stop();
@@ -633,9 +633,9 @@ UI.Statemachine = new (function() {
 
 	this.connectTransition = function(state) {
 		if (!connecting) return;
-		if (displayed_sm.isConcurrent() 
-			&& state.getStateClass() != ':CONDITION' 
-			&& drag_transition.getFrom().getStateName() != "INIT") 
+		if (displayed_sm.isConcurrent()
+			&& state.getStateClass() != ':CONDITION'
+			&& drag_transition.getFrom().getStateName() != "INIT")
 			return;
 
 		var is_initial = drag_transition == displayed_sm.getInitialTransition();

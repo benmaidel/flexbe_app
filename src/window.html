@@ -108,10 +108,10 @@
 				</td></tr></table>
 			</div>
 		</td><td>
-			<div class="category_button_active" id="button_to_db"><img src="img/db_active.png" width="32" height="32" /> Behavior Dashboard</div>
-			<div class="category_button" id="button_to_sm"><img src="img/sm.png" width="32" height="32" /> Statemachine Editor</div>
-			<div class="category_button" id="button_to_rc"><img src="img/rc.png" width="32" height="32" /> Runtime Control</div>
-			<div class="category_button" id="button_to_se"><img src="img/se.png" width="32" height="32" /> Configuration</div>
+			<div class="category_button_active" id="button_to_db"><img src="img/db_active.png" width="32" height="32" /> <font style="color: lightgray">Behavior Dashboard</font></div>
+			<div class="category_button" id="button_to_sm"><img src="img/sm.png" width="32" height="32" /> <font style="color: lightgray">Statemachine Editor</font></div>
+			<div class="category_button" id="button_to_rc"><img src="img/rc.png" width="32" height="32" /> <font style="color: lightgray">Runtime Control</font></div>
+			<div class="category_button" id="button_to_se"><img src="img/se.png" width="32" height="32" /> <font style="color: lightgray">Configuration</font></div>
 		</td><td id="title_button_panel">
 
 		</td></tr></table>
@@ -167,7 +167,7 @@
 
 	<div id="properties_autocomplete" class="sidepanel_autocomplete" style="display: none;" idx="0"></div>
 
-	<div id="dashboard">
+	<div id="dashboard"> 
 
 		<div class="box">
 			<h1>Overview</h1>
@@ -201,7 +201,7 @@
 
 		<div class="box">
 			<h1>Private Configuration</h1>
-			<font style="color: gray">Variables enable easy configuration of constant internal values which are used multiple times. They are read-only and cannot be used in private functions.</font>
+			<font style="color: lightgray">Variables enable easy configuration of constant internal values which are used multiple times. They are read-only and cannot be used in private functions.</font>
 			<table class="box_table" id="db_variable_table"></table>
 			<table class="box_table"><tr><td>
 				<input id="input_db_variable_key_add" type="text" class="input_field" />
@@ -217,7 +217,7 @@
 
 		<div class="box">
 			<h1>State Machine Userdata</h1>
-			<font style="color: gray">The userdata of a state machine can be used to pass any data from one state to another. Userdata values may be changed by states during runtime. Make sure you define default values for all userdata keys.</font>
+			<font style="color: lightgray">The userdata of a state machine can be used to pass any data from one state to another. Userdata values may be changed by states during runtime. Make sure you define default values for all userdata keys.</font>
 			<table class="box_table" id="db_userdata_table"></table>
 			<table class="box_table"><tr><td>
 				<input id="input_db_userdata_key_add" type="text" class="input_field" />
@@ -260,13 +260,13 @@
 
 		<div class="box">
 			<h1>Private Functions</h1>
-			<font style="color: gray">Defines which functions can be referenced by states that accept functions as parameters. Make sure that the interface of each function matches the requirements of the respective state. These functions can be implemented later in the generated code. Functions can be accessed as self.<i>function_name</i>.</font>
+			<font style="color: lightgray">Defines which functions can be referenced by states that accept functions as parameters. Make sure that the interface of each function matches the requirements of the respective state. These functions can be implemented later in the generated code. Functions can be accessed as self.<i>function_name</i>.</font>
 			<table class="box_table" id="db_function_table"></table>
 		</div>
 
 		<div class="box">
 			<h1>State Machine Interface</h1>
-			<font style="color: gray">Defines how the state machine of this behavior can be accessed when embedded in another behavior.</font>
+			<font style="color: lightgray">Defines how the state machine of this behavior can be accessed when embedded in another behavior.</font>
 			<table style="width: 100%; padding-right: 5px; margin-top: 5px">
 				<tr>
 					<td valign="top" style="padding-top: 10px;">Outcomes</td>
@@ -321,7 +321,7 @@
 		<div id="runtime_state_display" class="drawbox">
 			<div id="runtime_configuration_display" class="runtimebox_text">
 				<h1>Configure Behavior Execution</h1>
-				<font style="color: gray">
+				<font style="color: lightgray">
 					Set available parameters for execution and start the current behavior.
 					You will be able to control execution of the behavior at this page.
 				</font>
@@ -347,7 +347,7 @@
 			</div>
 			<div id="runtime_external_display" class="runtimebox_text">
 				<h1>External Behavior Running</h1>
-				<font style="color: gray">
+				<font style="color: lightgray">
 					<br />
 					Behavior has been started from a different control instance.<br /><br />
 					You can load the currently running behavior and attach this GUI to it in order to monitor and control execution.
@@ -361,7 +361,7 @@
 			</div>
 			<div id="runtime_offline_display" class="runtimebox_text" style="display: inline;">
 				<h1>No connection!</h1>
-				<font style="color: gray">
+				<font style="color: lightgray">
 					You are currently not connected to the onboard behavior engine of the robot.
 					As soon as you are connected, you can configure the behavior by setting the values of its parameters and then start execution.
 				</font>
@@ -387,7 +387,7 @@
 			</div>
 			<div id="runtime_no_behavior_display" class="runtimebox_text">
 				<h1>No behavior selected!</h1>
-				<font style="color: gray">
+				<font style="color: lightgray">
 					In order to start execution of a behavior, you need to have a saved behavior open.
 					Please go to the Behavior Dashboard and load an existing behavior or create a new one and save it.
 				</font>
@@ -445,7 +445,7 @@
 			<br /><br />
 			<input id="button_behavior_sync" type="button" value="Sync" style="float: right;" />
 			<input id="cb_allow_preempt" type="checkbox" />
-			<input id="button_behavior_preempt" type="button" value="Stop Execution" style="color: gray;" disabled="disabled" /> <i>(stopped behaviors can't be resumed)</i>
+			<input id="button_behavior_preempt" type="button" value="Stop Execution" style="color: lightgray;" disabled="disabled" /> <i>(stopped behaviors can't be resumed)</i>
 		</div>
 
 		<div class="widebox" style="height: calc(33% - 35px);">
@@ -461,12 +461,9 @@
 
 	<div id="settings">
 
-		<input style="display:none;" id="file_dialog_import" type="file" accept=".json" />
-		<input style="display:none;" id="file_dialog_export" type="file" accept=".json" nwsaveas="flexbe_config.json" />
-
 		<div class="box">
 			<h1>Runtime Settings</h1>
-			<font style="color: gray">
+			<font style="color: lightgray">
 				Configuration of controlling behaviors during runtime.
 			</font>
 			<table  class="box_table" style="width: 100%; padding-right: 5px; margin-top: 5px">
@@ -490,7 +487,7 @@
 
 		<div class="box">
 			<h1>Code Generation</h1>
-			<font style="color: gray">Configuration of code files generated from this editor.</font>
+			<font style="color: lightgray">Configuration of code files generated from this editor.</font>
 			<table  class="box_table" style="width: 100%; padding-right: 5px; margin-top: 5px">
 				<tr title="Default name of the ROS package to which new behaviors should be added, adjust this for each behavior at the Behavior Dashboard.">
 					<td width="150">Default package: </td>
@@ -518,7 +515,7 @@
 
 		<div class="box">
 			<h1>Editor Settings</h1>
-			<font style="color: gray">
+			<font style="color: lightgray">
 				Configuration of developing or modifying behaviors.
 			</font>
 			<table  class="box_table" style="width: 100%; padding-right: 5px; margin-top: 5px">
@@ -548,7 +545,7 @@
 
 		<div class="box">
 			<h1>ROS Properties</h1>
-			<font style="color: gray">
+			<font style="color: lightgray">
 				Overview of the ROS connection and FlexBE-related configuration.
 			</font>
 			<table  class="box_table" style="width: 100%; padding-right: 5px; margin-top: 5px">
@@ -568,7 +565,7 @@
 
 		<div class="box">
 			<h1>Workspace</h1>
-			<font style="color: gray">
+			<font style="color: lightgray">
 				Provides an overview of available state and behavior packages.
 			</font>
 			<table class="box_table" style="width: 100%; padding-right: 5px; margin-top: 5px">
@@ -602,7 +599,7 @@
 
 		<div class="box">
 			<h1>Behavior Synthesis</h1>
-			<font style="color: gray">
+			<font style="color: lightgray">
 				Incorporate any compatible external synthesis tool in order to automatically generate state machines.
 			</font>
 			<table  class="box_table" style="width: 100%; padding-right: 5px; margin-top: 5px">
@@ -631,14 +628,14 @@
 			<div style="font-weight: bold;">
 				<input id="input_prop_state_name" class="inline_title_text_edit" type="text" />
 			</div>
-			<table class="sidepanel_table" style="font-style: italic; padding: 0px 5px; color: gray;">
+			<table class="sidepanel_table" style="font-style: italic; padding: 0px 5px; color: lightgray;">
 				<tr><td style="width: 60px">Type:</td>
 					<td id="label_prop_state_class"></td></tr>
 				<tr><td>Package:</td>
 					<td id="label_prop_state_package"></td></tr>
 			</table>
 
-			<div id="label_prop_state_desc"  class="sidepanel_category" style="color: gray; margin-top: 5px"></div>
+			<div id="label_prop_state_desc"  class="sidepanel_category" style="color: lightgray; margin-top: 5px"></div>
 
 			<input id="button_view_state" type="button" value="View Source" />
 
@@ -677,14 +674,14 @@
 			<div style="font-weight: bold;">
 				<input id="input_prop_be_name" class="inline_title_text_edit" type="text" />
 			</div>
-			<table class="sidepanel_table" style="font-style: italic; padding: 0px 5px; color: gray;">
+			<table class="sidepanel_table" style="font-style: italic; padding: 0px 5px; color: lightgray;">
 				<tr><td style="width: 60px">Type:</td>
 					<td id="label_prop_be_class"></td></tr>
 				<tr><td>Package:</td>
 					<td id="label_prop_be_package"></td></tr>
 			</table>
 
-			<div id="label_prop_be_desc"  class="sidepanel_category" style="color: gray; margin-top: 5px"></div>
+			<div id="label_prop_be_desc"  class="sidepanel_category" style="color: lightgray; margin-top: 5px"></div>
 
 			<input id="button_view_behavior" type="button" value="Open this Behavior" />
 
@@ -723,7 +720,7 @@
 			<div style="font-weight: bold;">
 				<input id="input_prop_sm_name" class="inline_title_text_edit" type="text" />
 			</div>
-			<div style="font-style: italic; padding: 0px 5px; margin-top: 5px; color: gray;">
+			<div style="font-style: italic; padding: 0px 5px; margin-top: 5px; color: lightgray;">
 				Type:
 				<select id="select_container_type">
 					<option value="statemachine">Statemachine</option>

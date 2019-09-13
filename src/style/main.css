@@ -4,7 +4,7 @@ body, html {
 	width:100%;
 	/*background-image: url('../img/background.jpg');
 	background-size: cover;*/
-	background-color: #eee;
+	background-color: #333;
 	overflow: hidden;
 	position:fixed;
     font-family: Ubuntu, Arial, sans-serif;
@@ -17,8 +17,8 @@ body, html {
 	position: fixed;
 	height: 79px;
 	width: 100%;
-	background: linear-gradient(#f2f2f2, #e5e5e5);
-	border-bottom: 1px solid black;
+	background: linear-gradient(#727171, #414040);
+	border-bottom: 1px solid rgb(58, 107, 126);
 	vertical-align: middle;
 	box-shadow: 2px 2px 15px #999;
 	z-index: 50;
