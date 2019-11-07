@@ -2,6 +2,16 @@
 Changelog for package flexbe_app
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#1 <https://github.com/mojin-robotics/flexbe_app/issues/1>`_ from benmaidel/fix/rosmsg_to_json
+  Fixes and improvements
+* consider state as valid if input_key is same as parameter and parameter is set
+* use yaml safe_load
+* safely load yaml to get rid of yaml warning
+* fix rosmsg to json conversion (melodic)
+* Contributors: Benjamin Maidel
+
 2.2.1 (2019-06-02)
 ------------------
 * Match update of flexbe_ci to xenial
